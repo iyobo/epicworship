@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/Bundle_en_CA.properties?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1188.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.quvizo.ui.director.fxcontroller.DirectorViewFX">
+  <children>
+    <TabPane id="tabPane1" prefHeight="624.0" prefWidth="958.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="31.0">
+      <tabs>
+        <Tab id="tab1" text="%tab.creation">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TabPane id="tabPane2" prefHeight="583.0" prefWidth="737.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="263.0" AnchorPane.topAnchor="0.0">
+                  <tabs>
+                    <Tab id="tab3" text="%tab.creation.song">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="733.0000999999975">
+                          <children>
+                            <ToolBar id="toolBar1" prefHeight="39.0" prefWidth="380.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <effect>
+                                <DropShadow />
+                              </effect>
+                              <items>
+                                <Button id="button1" fx:id="creationAddSongBtn" text="+">
+                                  <tooltip>
+                                    <Tooltip id="tooltip23" text="%directorview.tooltip2" />
+                                  </tooltip>
+                                </Button>
+                                <Button id="button1" fx:id="creationDelSongBtn" text="-">
+                                  <tooltip>
+                                    <Tooltip id="tooltip29" text="%directorview.tooltip3" />
+                                  </tooltip>
+                                </Button>
+                                <Button id="button1" fx:id="creationPresentSongBtn" text="&gt;&gt;&gt;">
+                                  <tooltip>
+                                    <Tooltip id="tooltip24" text="%directorview.tooltip4" />
+                                  </tooltip>
+                                </Button>
+                                <TextField id="textField1" fx:id="creationSearchSongField" prefWidth="200.0" promptText="%tab.creation.song.search">
+                                  <tooltip>
+                                    <Tooltip id="tooltip25" text="%directorview.tooltip5" />
+                                  </tooltip>
+                                </TextField>
+                              </items>
+                            </ToolBar>
+                            <TextField id="textField2" fx:id="creationSongTitleField" prefHeight="26.0" prefWidth="454.0" promptText="%tab.creation.song.title.prt" AnchorPane.leftAnchor="458.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0" />
+                            <Label id="label3" text="%tab.creation.song.title" AnchorPane.leftAnchor="396.0" AnchorPane.topAnchor="16.0" />
+                            <TextArea id="textArea1" fx:id="creationSongBodyField" prefHeight="400.0" prefWidth="323.5" wrapText="true" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="396.0" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="83.0">
+                              <tooltip>
+                                <Tooltip id="tooltip2" text="%directorview.tooltip6" />
+                              </tooltip>
+                            </TextArea>
+                            <TextField id="textField2" fx:id="creationSongAuthorField" editable="false" prefHeight="26.0" prefWidth="418.5" promptText="%tab.creation.song.author.prt" AnchorPane.leftAnchor="466.0" AnchorPane.rightAnchor="40.5" AnchorPane.topAnchor="47.0">
+                              <tooltip>
+                                <Tooltip id="tooltip26" text="%directorview.tooltip7" />
+                              </tooltip>
+                            </TextField>
+                            <Label id="label3" text="%tab.creation.song.author" AnchorPane.leftAnchor="398.0" AnchorPane.topAnchor="51.0" />
+                            <Button id="button2" fx:id="creationSaveSongBtn" layoutX="396.0" prefWidth="106.0" text="%tab.creation.song.buttonsave" AnchorPane.bottomAnchor="21.0">
+                              <effect>
+                                <DropShadow />
+                              </effect>
+                              <tooltip>
+                                <Tooltip id="tooltip22" text="%directorview.tooltip8" />
+                              </tooltip>
+                            </Button>
+                            <TableView id="songTable" fx:id="creationSongTable" prefHeight="473.81" prefWidth="367.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="47.19">
+                              <tooltip>
+                                <Tooltip id="tooltip21" text="%directorview.tooltip9" />
+                              </tooltip>
+                            </TableView>
+                            <Button id="button2" fx:id="creationSaveSongPresBtn" layoutX="519.0" prefHeight="-1.0" prefWidth="242.0" text="%tab.creation.song.buttonsaveandadd" AnchorPane.bottomAnchor="21.0">
+                              <effect>
+                                <DropShadow />
+                              </effect>
+                              <tooltip>
+                                <Tooltip id="tooltip22" text="%directorview.tooltip10" />
+                              </tooltip>
+                            </Button>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                      <tooltip>
+                        <Tooltip id="tooltip3" text="%directorview.tooltip1" />
+                      </tooltip>
+                    </Tab>
+                    <Tab id="tab4" text="%tab.creation.media">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <ToolBar id="toolBar2" prefHeight="39.0" prefWidth="709.0">
+                              <effect>
+                                <DropShadow />
+                              </effect>
+                              <items>
+                                <Button id="button1" fx:id="creationAddMediaBtn" text="+">
+                                  <tooltip>
+                                    <Tooltip id="tooltip5" text="%directorview.tooltip12" />
+                                  </tooltip>
+                                </Button>
+                                <Button id="button1" fx:id="creationDelMediaBtn" text="-">
+                                  <tooltip>
+                                    <Tooltip id="tooltip6" text="%directorview.tooltip13" />
+                                  </tooltip>
+                                </Button>
+                                <Button id="button1" fx:id="creationPresentMediaBtn" text="&gt;&gt;&gt;">
+                                  <tooltip>
+                                    <Tooltip id="tooltip7" text="%directorview.tooltip14" />
+                                  </tooltip>
+                                </Button>
+                              </items>
+                            </ToolBar>
+                            <ListView id="listView3" fx:id="creationMediaList" prefHeight="456.0" prefWidth="673.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="47.0">
+                              <tooltip>
+                                <Tooltip id="tooltip8" text="%directorview.tooltip15" />
+                              </tooltip>
+                            </ListView>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                      <tooltip>
+                        <Tooltip id="tooltip4" text="%directorview.tooltip11" />
+                      </tooltip>
+                    </Tab>
+                    <Tab id="tab5" text="%tab.creation.scripture">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <Button id="button3" fx:id="creationOpenBibleBtn" layoutX="30.0" layoutY="30.0" prefHeight="72.0" prefWidth="198.0" text="%tab.creation.scripture.buttonbilbe">
+                              <tooltip>
+                                <Tooltip id="tooltip1" text="%directorview.tooltip17" />
+                              </tooltip>
+                            </Button>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                      <tooltip>
+                        <Tooltip id="tooltip13" text="%directorview.tooltip16" />
+                      </tooltip>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+                <VBox id="vBox1" prefHeight="583.0" prefWidth="242.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <Label id="label2" text="%tab.creation.song.presentations">
+                      <effect>
+                        <DropShadow />
+                      </effect>
+                    </Label>
+                    <ToolBar id="toolBar1">
+                      <effect>
+                        <DropShadow />
+                      </effect>
+                      <items>
+                        <Button id="button1" fx:id="creationAddPresBtn" text="+">
+                          <tooltip>
+                            <Tooltip id="tooltip9" text="%directorview.tooltip18" />
+                          </tooltip>
+                        </Button>
+                        <Button id="button1" fx:id="creationDelPresBtn" text="-">
+                          <tooltip>
+                            <Tooltip id="tooltip10" text="%directorview.tooltip19" />
+                          </tooltip>
+                        </Button>
+                      </items>
+                    </ToolBar>
+                    <ListView id="listView1" fx:id="creationPresentationList" prefHeight="117.0" prefWidth="281.0" VBox.vgrow="ALWAYS" />
+                    <Separator id="separatorHorizontal1" prefWidth="200.0">
+                      <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                      </VBox.margin>
+                    </Separator>
+                    <Label id="label2" text="%tab.creation.song.presentationitems">
+                      <effect>
+                        <DropShadow />
+                      </effect>
+                    </Label>
+                    <ToolBar id="toolBar1">
+                      <effect>
+                        <DropShadow />
+                      </effect>
+                      <items>
+                        <Button id="button1" fx:id="creationDelPresItemBtn" text="-">
+                          <tooltip>
+                            <Tooltip id="tooltip11" text="%directorview.tooltip20" />
+                          </tooltip>
+                        </Button>
+                      </items>
+                    </ToolBar>
+                    <ListView id="listView1" fx:id="creationPresAssetList" prefHeight="255.0" prefWidth="281.0" VBox.vgrow="ALWAYS">
+                      <tooltip>
+                        <Tooltip id="tooltip28" text="%directorview.tooltip21" />
+                      </tooltip>
+                    </ListView>
+                  </children>
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                </VBox>
+                <Separator id="separatorVertical1" minWidth="0.0" orientation="VERTICAL" prefHeight="553.0" prefWidth="0.0" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="9.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="tab2" text="%tab.live">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="676.0" prefWidth="1079.0">
+              <children>
+                <TableView id="tableView1" fx:id="liveTable" prefHeight="501.0" prefWidth="681.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="14.0" />
+                <Accordion id="accordion1" fx:id="liveQuickAccordion" prefHeight="529.0" prefWidth="260.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="39.0">
+                  <expandedPane>
+                    <TitledPane id="titledPane2" fx:id="x1" animated="false" text="%tab.live.backgrounds">
+                      <content>
+                        <VBox id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" spacing="10.0">
+                          <children>
+                            <Label id="label7" prefHeight="20.0" prefWidth="145.0" text="%tab.live.backgrounds.label1">
+                              <VBox.margin>
+                                <Insets />
+                              </VBox.margin>
+                            </Label>
+                            <ToggleButton id="toggleButton1" fx:id="liveMotionBackToggler" prefHeight="41.0" prefWidth="227.0" selected="true" text="%tab.live.backgrounds.motiontoggle">
+                              <tooltip>
+                                <Tooltip id="tooltip14" text="%directorview.tooltip23" />
+                              </tooltip>
+                            </ToggleButton>
+                            <Button id="button6" fx:id="liveChangeMotionBackBtn" prefHeight="41.0" prefWidth="227.0" text="%tab.live.backgrounds.changemotion">
+                              <tooltip>
+                                <Tooltip id="tooltip15" text="%directorview.tooltip24" />
+                              </tooltip>
+                            </Button>
+                            <Separator id="separatorHorizontal4" prefHeight="20.0" prefWidth="260.0" />
+                            <Label id="label7" prefHeight="20.0" prefWidth="143.0" text="%tab.live.backgrounds.label2" />
+                            <Button id="button6" fx:id="liveChangePicBackBtn" prefHeight="41.0" prefWidth="227.0" text="%tab.live.backgrounds.changepicture">
+                              <tooltip>
+                                <Tooltip id="tooltip16" text="%directorview.tooltip25" />
+                              </tooltip>
+                            </Button>
+                            <Separator prefWidth="256.0" />
+                            <Label text="%tab.live.backgrounds.label3" />
+                            <Button fx:id="BTClearScreen" mnemonicParsing="false" prefHeight="41.0" prefWidth="227.0" text="%tab.live.buttonclear" />
+                            <Button id="BTClearScreen" fx:id="btLogoScreen" mnemonicParsing="false" prefHeight="41.0" prefWidth="227.0" text="%tab.live.logoscr" />
+                            <Button id="BTClearScreen" fx:id="btBlackScreen" mnemonicParsing="false" prefHeight="41.0" prefWidth="227.0" text="%tab.live.blackscr" />
+                            <Button id="BTClearScreen" fx:id="btAlert" mnemonicParsing="false" prefHeight="41.0" prefWidth="227.0" text="%alertview.title" />
+                          </children>
+                          <padding>
+                            <Insets left="15.0" />
+                          </padding>
+                        </VBox>
+                      </content>
+                    </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <fx:reference source="x1" />
+                    <TitledPane id="titledPane3" fx:id="x2" animated="false" text="%tab.live.textdisplay">
+                      <content>
+                        <VBox id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" spacing="10.0">
+                          <children>
+                            <Button id="button4" fx:id="liveOpenBibleBtn" minHeight="26.0" prefHeight="26.0" prefWidth="124.00009999999747" text="%tab.creation.scripture.buttonbilbe">
+                              <tooltip>
+                                <Tooltip id="tooltip17" text="%directorview.tooltip26" />
+                              </tooltip>
+                              <VBox.margin>
+                                <Insets top="10.0" />
+                              </VBox.margin>
+                            </Button>
+                            <Separator id="separatorHorizontal2" minHeight="2.0" prefHeight="2.0" prefWidth="241.0" />
+                            <Label id="label6" text="%tab.live.textdisplay.label1" />
+                            <ListView id="listView2" fx:id="liveTextColor" orientation="HORIZONTAL" prefHeight="41.0" prefWidth="200.0">
+                              <tooltip>
+                                <Tooltip id="tooltip18" text="%directorview.tooltip27" />
+                              </tooltip>
+                            </ListView>
+                            <Label id="label6" text="%tab.live.textdisplay.label2" />
+                            <ListView id="listView2" fx:id="liveTextShadowColor" orientation="HORIZONTAL" prefHeight="41.0" prefWidth="200.0">
+                              <tooltip>
+                                <Tooltip id="tooltip19" text="%directorview.tooltip28" />
+                              </tooltip>
+                            </ListView>
+                            <Label id="label61" prefHeight="20.0" prefWidth="227.0" text="%tab.live.textdisplay.label3" />
+                            <ListView id="listView3" fx:id="liveTextShadowDimmer" orientation="HORIZONTAL" prefHeight="31.0" prefWidth="228.0">
+                              <tooltip>
+                                <Tooltip id="tooltip19" text="%directorview.tooltip29" />
+                              </tooltip>
+                            </ListView>
+                            <Label id="label43" text="%tab.live.textdisplay.label4" />
+                            <ListView id="listView33" fx:id="liveTextSize" orientation="HORIZONTAL" prefHeight="31.0" prefWidth="228.0">
+                              <tooltip>
+                                <Tooltip id="tooltip19" text="%directorview.tooltip30" />
+                              </tooltip>
+                            </ListView>
+                            <Separator id="separatorHorizontal3" prefHeight="4.0" prefWidth="255.0" />
+                            <Label id="label6" text="%tab.live.textdisplay.label5" />
+                            <TextArea id="textArea2" fx:id="liveQuikTextField" prefHeight="159.0" prefWidth="236.0" wrapText="true">
+                              <tooltip>
+                                <Tooltip id="tooltip20" text="%directorview.tooltip31" />
+                              </tooltip>
+                            </TextArea>
+                            <HBox prefHeight="51.0" prefWidth="256.0" spacing="15.0">
+                              <children>
+                                <Button id="button5" fx:id="liveQuikTextBtn" prefHeight="27.0" prefWidth="110.0" text="%tab.live.textdisplay.buttonproject" />
+                                <Button id="button5" fx:id="liveClearBtn" prefHeight="27.0" prefWidth="110.0" text="%tab.live.buttonclear" />
+                              </children>
+                              <padding>
+                                <Insets left="10.0" />
+                              </padding>
+                            </HBox>
+                          </children>
+                          <padding>
+                            <Insets left="10.0" right="10.0" />
+                          </padding>
+                        </VBox>
+                      </content>
+                    </TitledPane>
+                  </panes>
+                </Accordion>
+                <Label id="label5" text="%tab.live.quikpanel" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="14.0">
+                  <effect>
+                    <DropShadow />
+                  </effect>
+                  <tooltip>
+                    <Tooltip id="tooltip30" text="%directorview.tooltip32" />
+                  </tooltip>
+                </Label>
+                <VBox id="vBox2" fx:id="liveMediaControlPane" prefHeight="51.0" prefWidth="680.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="305.0" />
+              </children>
+            </AnchorPane>
+          </content>
+          <tooltip>
+            <Tooltip id="tooltip31" text="%directorview.tooltip22" />
+          </tooltip>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <AnchorPane id="anchorPane1" minHeight="31.0" prefHeight="31.0" prefWidth="958.0">
+      <children>
+        <MenuBar id="menuBar1" minHeight="27.0" prefHeight="31.0" prefWidth="439.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="1.0">
+          <effect>
+            <DropShadow />
+          </effect>
+          <menus>
+            <Menu id="fileMenu1" text="%menu.application">
+              <items>
+                <MenuItem id="menuItem1" text="%menu.application.countdown" fx:id="countdownMenuItem" />
+                <MenuItem mnemonicParsing="false" text="%menu.application.settings" fx:id="settingsMenuItem" />
+                <MenuItem id="close1" text="%menu.application.exit" fx:id="exitMenuItem" />
+              </items>
+            </Menu>
+            <Menu id="menu1" text="%menu.import">
+              <items>
+                <MenuItem id="menuItem3" text="%menu.import.default" fx:id="defaultImportMenuItem" />
+                <MenuItem id="menuItem4" text="%menu.import.ew" fx:id="epcImportMenuItem" />
+                <MenuItem mnemonicParsing="false" text="%menu.import.powerpoint" fx:id="MIPowerPoint" />
+              </items>
+            </Menu>
+            <Menu id="menu2" text="%menu.export">
+              <items>
+                <MenuItem id="menuItem5" text="%menu.export.ew" fx:id="epcExportMenuItem" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%menu.language" fx:id="mLanguage">
+              <items>
+                <MenuItem mnemonicParsing="false" text="English" fx:id="mIEnglish" />
+                <MenuItem mnemonicParsing="false" text="Português" fx:id="mIPortuguese" />
+                <MenuItem mnemonicParsing="false" text="Czech" fx:id="mICzech" />
+              </items>
+            </Menu>
+            <Menu id="helpMenu1" text="%menu.help">
+              <items>
+                <MenuItem id="menuItem2" text="%menu.help.instructions" fx:id="instructionsMenuItem" />
+                <MenuItem id="about1" text="%menu.help.about" fx:id="aboutnMenuItem" />
+              </items>
+            </Menu>
+          </menus>
+          <tooltip>
+            <Tooltip id="tooltip27" text="%directorview.tooltip33" />
+          </tooltip>
+        </MenuBar>
+        <Label id="label1" fx:id="livePresentationLabel" graphicTextGap="9.0" prefHeight="31.0" prefWidth="677.0" text="%now.live" AnchorPane.bottomAnchor="-1.5" AnchorPane.leftAnchor="464.0" AnchorPane.rightAnchor="-183.0" AnchorPane.topAnchor="1.5">
+          <font>
+            <Font name="System Bold" size="15.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

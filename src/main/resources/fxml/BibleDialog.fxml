@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0000999999975" prefWidth="851.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.quvizo.ui.bible.BibleDialogController">
+  <children>
+    <ListView fx:id="oldbooklist" onMouseClicked="#onOldBookSelected" onTouchPressed="#onOldBookSelected" prefHeight="643.0" prefWidth="176.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="29.0" />
+    <Label fx:id="oldbooklbl" text="Old Testament" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="6.0" />
+    <ListView fx:id="newbooklist" onMouseClicked="#onNewBookSelected" prefHeight="643.0000999999975" prefWidth="165.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="203.0" AnchorPane.topAnchor="29.0" />
+    <Label fx:id="newbooklbl" text="New Testament" AnchorPane.leftAnchor="234.0" AnchorPane.topAnchor="6.0" />
+    <ListView fx:id="chapterlist" onMouseClicked="#onChapterSelected" prefHeight="313.999977929685" prefWidth="68.0" AnchorPane.bottomAnchor="343.0" AnchorPane.leftAnchor="383.0" AnchorPane.topAnchor="29.0" />
+    <Label fx:id="chapterlbl" text="Chapter" AnchorPane.leftAnchor="391.0" AnchorPane.topAnchor="7.0" />
+    <ListView fx:id="verselist" onMouseClicked="#onVerseSelected" prefHeight="314.0" prefWidth="68.0" AnchorPane.bottomAnchor="343.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="29.0" />
+    <Label fx:id="verselbl" text="Verse" AnchorPane.leftAnchor="476.0" AnchorPane.topAnchor="7.0" />
+    <ListView fx:id="toverselist" onMouseClicked="#onToVerseSelected" prefHeight="314.0" prefWidth="68.0" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="537.0" AnchorPane.topAnchor="30.0" />
+    <Label fx:id="toverselbl" text="To Verse" AnchorPane.leftAnchor="542.0" AnchorPane.topAnchor="7.0" />
+    <Accordion prefHeight="246.0" prefWidth="221.00002207031503" AnchorPane.leftAnchor="617.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0">
+      <expandedPane>
+        <TitledPane id="x1" fx:id="quikpane" animated="false" prefHeight="289.0" prefWidth="214.0" text="Quik-Project">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="quikprevbtn" layoutX="5.0" layoutY="59.0" mnemonicParsing="false" onAction="#onPrev" prefHeight="44.0" prefWidth="137.0" text="&lt; Previous" />
+                <Button fx:id="quiknextbtn" layoutX="5.0" layoutY="7.0" mnemonicParsing="false" onAction="#onNext" prefHeight="44.0" prefWidth="136.9998779296875" text="Project | Next &gt;" />
+                <Button fx:id="quikclearbtn" layoutX="5.0" layoutY="112.0" mnemonicParsing="false" onAction="#onClearScreen" prefHeight="44.0" prefWidth="149.0" text="Clear Screen" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <fx:reference source="quikpane" />
+        <TitledPane id="versionslbl" fx:id="versionpane" animated="false" text="Versions">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ComboBox id="activeversionfield" fx:id="versionactivefield" layoutX="14.0" layoutY="30.0" onAction="#onVersionChange" prefHeight="30.0" prefWidth="168.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label fx:id="versionactivelbl" cache="true" cacheHint="SPEED" labelFor="$versionactivefield" layoutX="14.0" layoutY="6.0" text="Active Version" />
+                <Button fx:id="versionimportbtn" cache="true" cacheHint="SPEED" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" onAction="#onImportVersion" prefHeight="37.0" prefWidth="156.0" text="Import Version" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </panes>
+    </Accordion>
+    <TextArea fx:id="previewfield" editable="false" prefHeight="253.0000001192093" prefWidth="460.9999000000025" promptText="Select Scripture to see preview. [Verse] and [To Verse] are optional..." wrapText="true" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="377.0" AnchorPane.rightAnchor="14.0" />
+    <Button fx:id="addbtn" mnemonicParsing="false" onAction="#onAdd" prefHeight="37.0" prefWidth="220.00000083446503" text="Add to Presentation" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="119.0" />
+    <Button fx:id="closebtn" mnemonicParsing="false" onAction="#onClose" prefHeight="37.0" prefWidth="81.0" text="Close" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="27.0" />
+    <Label fx:id="previewlbl" text="Preview" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="384.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jnlp spec="1.5+" codebase="http://icevision.ice-edge.com/webstart/">
+    <application-desc main-class="net.iceedge.icevision.IceVision">
+        <argument>8009fbafe9a89fb3b49dc010eb3b88fc</argument>
+    </application-desc>
+    <information>
+        <description>ICEvision</description>
+        <homepage>http://icevision.ice-edge.com</homepage>
+        <icon kind="splash" href="ICEvision_splash.jpg"/>
+        <description kind="short">ICE</description>
+        <title>ICEvision</title>
+        <vendor>ICE Edge Business Solutions</vendor>
+    </information>
+    <resources arch="amd64">
+        <j2se version="1.5+" max-heap-size="4096M"/>
+        <jar href="gluegen-rt.jar"/>
+        <jar href="jogl.jar"/>
+        <jar href="concurrent.jar"/>
+        <jar href="iceRemote-client.jar"/>
+        <jar href="jboss-common.jar"/>
+        <jar href="jboss-remoting.jar"/>
+        <jar href="jboss-serialization.jar"/>
+        <jar href="i3d.jar"/>
+        <jar href="vecmath.jar"/>
+        <jar href="log4j-1.2.14.jar"/>
+        <jar href="resources.jar"/>
+        <jar href="swing-worker-1.2.jar"/>
+        <jar href="ice3DxDriver.jar"/>
+        <jar href="jmx-client.jar"/>
+        <jar href="httpclient-4.0.jar"/>
+        <jar href="httpcore-4.0.1.jar"/>
+        <jar href="httpmime-4.0.jar"/>
+        <jar href="apache-mime4j-0.6.jar"/>
+        <jar href="commons-logging-1.1.1.jar"/>
+        <jar href="basicplayer3.0.jar"/>
+        <jar href="tritonus_share.jar"/>
+        <jar href="jl1.0.jar"/>
+        <jar href="mp3spi1.9.4.jar"/>
+        <jar href="mail.jar"/>
+        <jar href="IceCommon.jar"/>
+        <jar href="activation-1.1.1.jar"/>
+        <jar href="gdata-client-1.0.jar"/>
+        <jar href="gdata-core-1.0.jar"/>
+        <jar href="gdata-media-1.0.jar"/>
+        <jar href="gdata-youtube-2.0.jar"/>
+        <jar href="google-collect-1.0-rc1.jar"/>
+        <jar href="ytuploader.jar"/>
+        <jar href="ICE3D.jar"/>
+        <jar main="true" href="icevision.jar"/>
+        <nativelib href="lib/nativelib64.dll.jar"/>
+        <property value="true" name="sun.java2d.noddraw"/>
+        <property value="true" name="sun.awt.noerasebackground"/>
+        <property value="IceVision" name="jnlp.ice.vision.remote.server.name"/>
+        <property value="true" name="jnlp.ice.vision.reskinnable"/>
+        <property value="noreply@ice-edge.com" name="jnlp.ice.vision.server.email.address"/>
+        <property value="ICEvision Delivery" name="jnlp.ice.vision.server.email.sendername"/>
+        <property value="data.icevision.ice-edge.com,443,80,https,true,true" name="jnlp.ice.vision.remote.server.config.0"/>
+        <property value="icevision.ice-edge.com,10022,10023,bisocket,false,false" name="jnlp.ice.vision.remote.server.config.1"/>
+        <property value="http://icevision.ice-edge.com" name="jnlp.ice.vision.remote.webhost"/>
+        <property value="FreeViewer" name="jnlp.net.iceedge.icevision.hostapp"/>
+        <property value="8009fbafe9a89fb3b49dc010eb3b88fc" name="jnlp.net.iceedge.icevision.model.key"/>
+    </resources>
+    <resources arch="x86_64">
+        <j2se version="1.5+" max-heap-size="4096M"/>
+        <jar href="gluegen-rt.jar"/>
+        <jar href="jogl.jar"/>
+        <jar href="concurrent.jar"/>
+        <jar href="iceRemote-client.jar"/>
+        <jar href="jboss-common.jar"/>
+        <jar href="jboss-remoting.jar"/>
+        <jar href="jboss-serialization.jar"/>
+        <jar href="i3d.jar"/>
+        <jar href="vecmath.jar"/>
+        <jar href="log4j-1.2.14.jar"/>
+        <jar href="resources.jar"/>
+        <jar href="swing-worker-1.2.jar"/>
+        <jar href="ice3DxDriver.jar"/>
+        <jar href="jmx-client.jar"/>
+        <jar href="httpclient-4.0.jar"/>
+        <jar href="httpcore-4.0.1.jar"/>
+        <jar href="httpmime-4.0.jar"/>
+        <jar href="apache-mime4j-0.6.jar"/>
+        <jar href="commons-logging-1.1.1.jar"/>
+        <jar href="basicplayer3.0.jar"/>
+        <jar href="tritonus_share.jar"/>
+        <jar href="jl1.0.jar"/>
+        <jar href="mp3spi1.9.4.jar"/>
+        <jar href="mail.jar"/>
+        <jar href="IceCommon.jar"/>
+        <jar href="activation-1.1.1.jar"/>
+        <jar href="gdata-client-1.0.jar"/>
+        <jar href="gdata-core-1.0.jar"/>
+        <jar href="gdata-media-1.0.jar"/>
+        <jar href="gdata-youtube-2.0.jar"/>
+        <jar href="google-collect-1.0-rc1.jar"/>
+        <jar href="ytuploader.jar"/>
+        <jar href="ICE3D.jar"/>
+        <jar main="true" href="icevision.jar"/>
+        <nativelib href="lib/nativelib64.dll.jar"/>
+        <property value="true" name="sun.java2d.noddraw"/>
+        <property value="true" name="sun.awt.noerasebackground"/>
+        <property value="IceVision" name="jnlp.ice.vision.remote.server.name"/>
+        <property value="true" name="jnlp.ice.vision.reskinnable"/>
+        <property value="noreply@ice-edge.com" name="jnlp.ice.vision.server.email.address"/>
+        <property value="ICEvision Delivery" name="jnlp.ice.vision.server.email.sendername"/>
+        <property value="data.icevision.ice-edge.com,443,80,https,true,true" name="jnlp.ice.vision.remote.server.config.0"/>
+        <property value="icevision.ice-edge.com,10022,10023,bisocket,false,false" name="jnlp.ice.vision.remote.server.config.1"/>
+        <property value="http://icevision.ice-edge.com" name="jnlp.ice.vision.remote.webhost"/>
+        <property value="FreeViewer" name="jnlp.net.iceedge.icevision.hostapp"/>
+        <property value="8009fbafe9a89fb3b49dc010eb3b88fc" name="jnlp.net.iceedge.icevision.model.key"/>
+    </resources>
+    <resources>
+        <j2se version="1.5+" max-heap-size="1024M"/>
+        <jar href="gluegen-rt.jar"/>
+        <jar href="jogl.jar"/>
+        <jar href="concurrent.jar"/>
+        <jar href="iceRemote-client.jar"/>
+        <jar href="jboss-common.jar"/>
+        <jar href="jboss-remoting.jar"/>
+        <jar href="jboss-serialization.jar"/>
+        <jar href="i3d.jar"/>
+        <jar href="vecmath.jar"/>
+        <jar href="log4j-1.2.14.jar"/>
+        <jar href="resources.jar"/>
+        <jar href="swing-worker-1.2.jar"/>
+        <jar href="ice3DxDriver.jar"/>
+        <jar href="jmx-client.jar"/>
+        <jar href="httpclient-4.0.jar"/>
+        <jar href="httpcore-4.0.1.jar"/>
+        <jar href="httpmime-4.0.jar"/>
+        <jar href="apache-mime4j-0.6.jar"/>
+        <jar href="commons-logging-1.1.1.jar"/>
+        <jar href="basicplayer3.0.jar"/>
+        <jar href="tritonus_share.jar"/>
+        <jar href="jl1.0.jar"/>
+        <jar href="mp3spi1.9.4.jar"/>
+        <jar href="mail.jar"/>
+        <jar href="IceCommon.jar"/>
+        <jar href="activation-1.1.1.jar"/>
+        <jar href="gdata-client-1.0.jar"/>
+        <jar href="gdata-core-1.0.jar"/>
+        <jar href="gdata-media-1.0.jar"/>
+        <jar href="gdata-youtube-2.0.jar"/>
+        <jar href="google-collect-1.0-rc1.jar"/>
+        <jar href="ytuploader.jar"/>
+        <jar href="ICE3D.jar"/>
+        <jar main="true" href="icevision.jar"/>
+        <nativelib href="lib/nativelib.dll.jar"/>
+        <property value="true" name="sun.java2d.noddraw"/>
+        <property value="true" name="sun.awt.noerasebackground"/>
+        <property value="IceVision" name="jnlp.ice.vision.remote.server.name"/>
+        <property value="true" name="jnlp.ice.vision.reskinnable"/>
+        <property value="noreply@ice-edge.com" name="jnlp.ice.vision.server.email.address"/>
+        <property value="ICEvision Delivery" name="jnlp.ice.vision.server.email.sendername"/>
+        <property value="data.icevision.ice-edge.com,443,80,https,true,true" name="jnlp.ice.vision.remote.server.config.0"/>
+        <property value="icevision.ice-edge.com,10022,10023,bisocket,false,false" name="jnlp.ice.vision.remote.server.config.1"/>
+        <property value="http://icevision.ice-edge.com" name="jnlp.ice.vision.remote.webhost"/>
+        <property value="FreeViewer" name="jnlp.net.iceedge.icevision.hostapp"/>
+        <property value="8009fbafe9a89fb3b49dc010eb3b88fc" name="jnlp.net.iceedge.icevision.model.key"/>
+    </resources>
+    <security>
+        <all-permissions></all-permissions>
+    </security>
+</jnlp>
+<!-- by downloading this and any other ICEvision content & software you agree to accept all terms and conditions outlined in https://icevision.ice-edge.com/license.jsf -->

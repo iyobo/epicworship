@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.quvizo.ui.fxmisc.ScreenPickerController">
+  <children>
+    <ImageView fitHeight="477.0" fitWidth="800.0" layoutX="0.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0">
+      <image>
+        <Image url="@../media/grid.jpg" />
+      </image>
+    </ImageView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="477.0" layoutX="0.0" layoutY="0.0" opacity="0.21" stroke="BLACK" strokeMiterLimit="8.3" strokeType="INSIDE" strokeWidth="7.3" width="800.0" />
+    <Rectangle arcHeight="51.0" arcWidth="24.0" fill="#cce0ff" height="31.0" layoutX="138.0" layoutY="70.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" width="620.0">
+      <effect>
+        <Bloom />
+      </effect>
+    </Rectangle>
+    <Pane fx:id="canvas" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="601.9999000000025" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="137.71" AnchorPane.rightAnchor="60.29" AnchorPane.topAnchor="114.0" />
+    <Label layoutX="150.0" layoutY="75.0" prefWidth="602.0" text="Hey! This is the layout of all your screens. Please click the screen your audience will see." wrapText="false">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="131.99999237060547" fitWidth="131.99999237060547" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="6.0">
+      <image>
+        <Image url="@../media/logo.png" />
+      </image>
+    </ImageView>
+    <Line endX="0.0" endY="-30.0" layoutX="137.0" layoutY="123.0" startX="-25.0" startY="-27.0" />
+    <Button minWidth="35.0" mnemonicParsing="false" onAction="#quit" prefHeight="30.0" prefWidth="35.0" text="X" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0" />
+  </children>
+</AnchorPane>

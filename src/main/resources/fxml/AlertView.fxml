@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/Bundle_en_CA.properties?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="565.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.quvizo.ui.fxmisc.AlertViewController">
+  <children>
+    <VBox layoutX="0.0" layoutY="0.0" prefHeight="309.0" prefWidth="565.0" spacing="5.0">
+      <children>
+        <Label text="%alertview.insertmsg" />
+        <HBox blendMode="SRC_OVER" prefHeight="191.0" prefWidth="479.0" spacing="5.0">
+          <children>
+            <TextArea fx:id="txtAreaAlert" prefHeight="191.0" prefWidth="337.0" wrapText="true" />
+            <VBox alignment="TOP_CENTER" prefHeight="191.0" prefWidth="207.0" spacing="10.0">
+              <children>
+                <Label text="%alertview.fontcolor" />
+                <ColorPicker fx:id="colorPckFont" />
+                <Label text="%alertview.bgcolor" />
+                <ColorPicker fx:id="colorPckBG" />
+                <Label text="%alertview.numtimes" />
+                <ChoiceBox fx:id="boxNumTimes" prefHeight="25.0" prefWidth="74.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="1" />
+                      <String fx:value="2" />
+                      <String fx:value="3" />
+                      <String fx:value="4" />
+                      <String fx:value="5" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="72.0" prefWidth="469.0" spacing="100.0">
+          <children>
+            <Button fx:id="btProject" mnemonicParsing="false" prefHeight="37.0" prefWidth="116.0" text="%alertview.project" />
+            <Button fx:id="btCancel" mnemonicParsing="false" prefHeight="37.0" prefWidth="116.0" text="%alertview.cancel" />
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets left="10.0" right="10.0" top="10.0" />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>

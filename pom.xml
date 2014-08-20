@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.quvizo</groupId>
+	<artifactId>epicworship</artifactId>
+	<version>1.4.3.0</version>
+	<packaging>jar</packaging>
+
+	<name>epicworship</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mainClass>com.quvizo.EpicWorship</mainClass>
+	</properties>
+
+	<organization>
+		<!-- Used as the 'Vendor' for JNLP generation -->
+		<name>Quvizo Interactive</name>
+		<url>http://quvizo.com</url>
+	</organization>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>unpack-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<excludeScope>system</excludeScope>
+							<excludeGroupIds>junit,org.mockito,org.hamcrest</excludeGroupIds>
+							<outputDirectory>${project.build.directory}/classes</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<id>unpack-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${java.home}/../bin/javafxpackager</executable>
+							<arguments>
+								<argument>-createjar</argument>
+								<argument>-nocss2bin</argument>
+								<argument>-appclass</argument>
+								<argument>${mainClass}</argument>
+								<argument>-srcdir</argument>
+								<argument>${project.build.directory}/classes</argument>
+								<argument>-outdir</argument>
+								<argument>${project.build.directory}</argument>
+								<argument>-outfile</argument>
+								<argument>${project.build.finalName}.jar</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<compilerArguments>
+						<bootclasspath>${sun.boot.class.path}${path.separator}${java.home}/lib/jfxrt.jar</bootclasspath>
+					</compilerArguments>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+
+			<!-- Uncomment for mac. Comment for everything else <plugin> <groupId>org.codehaus.mojo</groupId> 
+				<artifactId>osxappbundle-maven-plugin</artifactId> <version>1.0-alpha-1</version> 
+				<configuration> <mainClass>com.quvizo.EpicWorship</mainClass> </configuration> 
+				<executions> <execution> <phase>package</phase> <goals> <goal>bundle</goal> 
+				</goals> </execution> </executions> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<index>true</index>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+						<manifestEntries>
+							<url>${project.url}</url>
+							<!-- <SplashScreen-Image>src/main/resources/icons/splash.bmp</SplashScreen-Image> -->
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.bluestemsoftware.open.maven.plugin</groupId>
+				<artifactId>launch4j-plugin</artifactId>
+				<version>1.5.0.0</version>
+				<executions>
+					<!-- GUI exe -->
+					<execution>
+						<id>l4j-gui</id>
+						<phase>package</phase>
+						<goals>
+							<goal>launch4j</goal>
+						</goals>
+						<configuration>
+							<dontWrapJar>true</dontWrapJar>
+							<headerType>gui</headerType>
+							<outfile>target/${artifactId}.exe</outfile>
+							<jar>${artifactId}-${version}.jar</jar>
+							<errTitle>EpicWorship Launch Error</errTitle>
+							<!-- <classPath> <mainClass>com.quvizo.EpicWorship</mainClass> </classPath> -->
+							<icon>src/main/resources/icons/logo.ico</icon>
+							<splash>
+								<file>src/main/resources/icons/splash.bmp</file>
+								<waitForWindow>true</waitForWindow>
+								<timeout>60</timeout>
+								<timeoutErr>true</timeoutErr>
+							</splash>
+							<!-- <customProcName>false</customProcName> -->
+							<stayAlive>false</stayAlive>
+							<!-- <priority>normal</priority> -->
+							<jre>
+								<minVersion>1.7.0_25</minVersion>
+								<initialHeapSize>128</initialHeapSize>
+								<maxHeapSize>1024</maxHeapSize>
+								<opts>
+									<opt>-Djavafx.autoproxy.disable=true</opt>
+								</opts>
+							</jre>
+							<versionInfo>
+								<fileVersion>${version}</fileVersion>
+								<txtFileVersion>${version}</txtFileVersion>
+								<fileDescription>${description}</fileDescription>
+								<copyright>Quvizo Interactive</copyright>
+								<companyName>Quvizo Interactive</companyName>
+								<productVersion>${version}</productVersion>
+								<txtProductVersion>${version}</txtProductVersion>
+								<productName>${artifactId}</productName>
+								<internalName>${artifactId}</internalName>
+								<originalFilename>${artifactId}.exe</originalFilename>
+							</versionInfo>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<mkdir dir="target/${artifactId}-${version}" />
+								<copy todir="target/${artifactId}-${version}/data">
+									<fileset dir="data" />
+								</copy>
+								<copy todir="target/${artifactId}-${version}" overwrite="false">
+									<fileset dir="buildsrc" />
+									<filterset>
+										<filter token="JARFILE" value="${artifactId}-${version}.jar" />
+										<filter token="VERSION" value="${version}" />
+									</filterset>
+								</copy>
+								<copy file="target/${artifactId}-${version}.jar" todir="target/${artifactId}-${version}" />
+								<copy file="target/${artifactId}.exe" todir="target/${artifactId}-${version}" />
+								<zip destfile="target/${artifactId}-${version}.zip" basedir="target/${artifactId}-${version}" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>net.sf.nimrod</groupId>
+			<artifactId>nimrod-laf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>hibernate-annotations</artifactId>
+					<groupId>org.hibernate</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-commons-annotations</artifactId>
+					<groupId>org.hibernate</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-core</artifactId>
+					<groupId>org.hibernate</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-maven-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.derby</groupId>
+				<artifactId>derby</artifactId>
+				<version>10.10.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.nimrod</groupId>
+				<artifactId>nimrod-laf</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>3.9</version>
+			</dependency>
+			<dependency>
+				<groupId>jdom</groupId>
+				<artifactId>jdom</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.json-simple</groupId>
+				<artifactId>json-simple</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-scratchpad</artifactId>
+				<version>3.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>2.0-beta8</version>
+			</dependency>
+			<dependency>
+				<groupId>hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>3.4.0.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.2.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-maven-plugin</artifactId>
+				<version>3.3.2.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-annotations</artifactId>
+				<version>3.4.0.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>3.1.0.GA</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<description>Free Church projection Software</description>
+	<url>http://www.quvizo.com/central/epicworship</url>
+</project>

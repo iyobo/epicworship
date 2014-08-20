@@ -1,0 +1,1 @@
+java -jar -Djavafx.autoproxy.disable=true "@JARFILE@"

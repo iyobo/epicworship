@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <goals>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <!--<exec.args>-jar -classpath %classpath com.quvizo.EpicWorship -jar ${basedir}/target/epicworship-1.0.jar</exec.args>-->
+                <exec.args>-classpath %classpath -jar ${basedir}/target/epicworship-1.0.jar</exec.args>
+                <!--Good one <exec.args> -classpath %classpath -jar ${basedir}/target/epicworship-1.0.jar</exec.args>-->
+                <exec.executable>java</exec.executable>
+                <className>com.quvizo.EpicWorship</className>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <goals>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -jar -classpath %classpath com.quvizo.EpicWorship -classpath %classpath -jar ${basedir}/target/epicworship-1.0.jar</exec.args>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+                <className>${packageClassName}</className>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>${profiler.args} -jar -classpath %classpath com.quvizo.EpicWorship -classpath %classpath -jar ${basedir}/target/epicworship-1.0.jar</exec.args>
+                <exec.executable>${profiler.java}</exec.executable>
+                <className>${packageClassName}</className>
+            </properties>
+        </action>        
+    </actions>

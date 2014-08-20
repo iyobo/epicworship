@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="title" type="java.lang.String" value="About EpicWorship"/>
+    <Property name="alwaysOnTop" type="boolean" value="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane1" alignment="0" pref="866" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="657" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" pref="119" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel3" min="-2" pref="785" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" pref="586" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="1724" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="66" red="66" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Epicworship"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;EpicWorship is a very strong answer to the question &quot;Is there a &lt;b&gt;simple&lt;/b&gt;, but High-Quality Visual projection software that exists for Churches that is also absolutely FREE?&quot;.&lt;br/&gt;&lt;br/&gt;&lt;/html&gt;"/>
+                <Property name="verticalAlignment" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;h2&gt;Songs/Text&lt;/h2&gt; &lt;p&gt;Epicworship wouldn&apos;t be a solution without the ability to project text for every purpose. Now there&apos;s quite a lot of options that do this already, but Epicworship Sets itself apart by also projecting text with a brilliantly calculated shadow underlay so your text stands out no matter what background it is to be displayed on. &lt;br /&gt; You even have the power to choose how thick you want this shadow underlay or what colors it should be. We could keep talking about it, but it would only make sense to you if you tried it out.&lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h2&gt;Audio/Video&lt;/h2&gt; &lt;p&gt;EpicWorship supports MP4/FLV videos as well as MP3 audio. &lt;br /&gt; Supported codecs are ON2 FLV and H264 for MP4. WMV/WMA is NOT supported.&lt;br /&gt; If you ever try to load a video and epicworship completely and totally ignores your action, then your video codec was not supported.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h2&gt;Motion Background&lt;/h2&gt; &lt;p&gt;Use supported videos as background. The transitions when you change them are quite epic.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h2&gt;Scripture&lt;/h2&gt; &lt;p&gt;EpicWorship wouldn&apos;t be a viable solution without support for scripture projection.&lt;br /&gt; We have some in-built bible versions and the list will increase as time goes on, but you can also import bible translations from files.&lt;br /&gt; We recommend you get these bible files from OpenSong.org. Epicworship shares the same bible structure of that Church projection solution.&lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h2&gt;Video Countdown&lt;/h2&gt; &lt;p&gt;This was one of the many reasons that prompted it&apos;s development and one of the many ways it sets itself apart.&lt;br /&gt; &lt;br /&gt; With EpicWorship, you can schedule a video to play at a specific time of the week and it will handle itself like a big boy when you&apos;re not around it.&lt;br /&gt; Set the day of week (e,g Sunday), hour, minute and second and the video you want to play and as long as Epicworship happens to be running, it will automatically play that video at that specific time. &lt;br /&gt;Perfect for video countdowns to start your services in style.&lt;br /&gt; &lt;br /&gt; This technically could also be used to time-launch an MP3 file.&lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h2&gt;A typical day in the life of a Projection Director....&lt;/h2&gt; &lt;p&gt;&lt;br /&gt; We believe so much in intuitivity (if that&apos;s a word). So as far as instructions go, we won&apos;t be telling you how to do every little thing in epicworship.&lt;br /&gt; Much of it should be obvious and we&apos;ve added hover tooltips along the way to help you out. This would be typical actions of a director in a service...&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;1. First things first, Create a presentation. (The Creation tab)&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; - You&apos;ll find this on the left hand side of the Creation Tab. This is where all content for this service will be added.&lt;/li&gt; &lt;li&gt; - Epicworship will always open the last Presentation created when launched.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;/p&gt; &lt;h4&gt;2. Add Songs/Text (The Creation-&amp;gt;Song tab)&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; - You can create new songs or add pre-existing songs from the song list into the presentation you created earlier.&lt;/li&gt; &lt;li&gt; - Content added to the presentation can be seen (and removed) from the list at the bottom-right.&lt;/li&gt; &lt;li&gt; - Seperate the pages of a song with an empty line (Makes for easy copy and paste of lyrics).&lt;/li&gt; &lt;li&gt; - you can search for any phrase of a song from the search box at the top of the song list.&lt;/li&gt; &lt;li&gt; - To quickly add content to the presentation from the list.&lt;/li&gt; &lt;li&gt; - It&apos;s a good idea to make things like Announements a song.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;/p&gt; &lt;h4&gt;3. Add Audio/Video (The Creation-&amp;gt; Media)&lt;/h4&gt; &lt;p&gt;If you need to, this is where you add or register audio and video. Much of same tips apply as Songs/Text.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;4. Add Scripture&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; You can do this either from the Creation-&amp;gt;Scripture tab or from the Live tab. Launches the scripture dialog which allows you to add scripture to the presentation in preparation, or project scripture on the fly.&lt;/li&gt; &lt;li&gt; You can choose your translation there as well.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt; With these things ready, it&apos;s time to check out what&apos;s happening in the live Tab.&lt;br /&gt; Project an item or launch a media item by clicking on it&apos;s row in the live table.&lt;br /&gt; Notice the QuikPanel to the right. It has a Background mini-tab, and a Text &amp;amp; settings mini-tab.&lt;br /&gt; Here are some of the cool things you may want to do from there during a service:&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;1. Change backgrounds&lt;/h4&gt; &lt;p&gt;The backgrounds minitab contains all the actions to change your background video or image.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;2. Quickly add/project scripture&lt;/h4&gt; &lt;p&gt;From the Text &amp;amp; Settings min[itab, clicking on the &quot;Open bible&quot; button will launch the same scripture dialog as it did earlier in Creation-&amp;gt;Scripture.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;3. Change Text Appearance&lt;/h4&gt; &lt;p&gt;From the same minitab, you can customize a lot of things about the appearance of your text and songs. Give it a try.&lt;br /&gt; &lt;br /&gt;&lt;/p&gt; &lt;h4&gt;4. QUIKTEXT&lt;/h4&gt; &lt;p&gt;You can quickly project text that you have not created a song of from here. Like an alert or a snarky comment to the congregation =)&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;strong&gt;...and That&apos;s it! May this tool serve you well in your sharing of the gospel to the people.&lt;br /&gt; God bless.&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;"/>
+                <Property name="verticalAlignment" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1.0.3.2"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/Bundle_en_CA.properties?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1130.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.quvizo.ui.fxmisc.SettingsViewController">
+  <children>
+    <Separator layoutX="596.0" layoutY="0.0" orientation="VERTICAL" prefHeight="575.0" />
+    <VBox layoutX="0.0" layoutY="-1.0" prefHeight="576.0" prefWidth="589.0" spacing="10.0">
+      <children>
+        <CheckBox fx:id="cBSettings" mnemonicParsing="false" onAction="#CheckBoxDefault" selected="true" text="%settingsview.use.default">
+          <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </VBox.margin>
+        </CheckBox>
+        <Label text="%settingsview.startvideo" />
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <TextField fx:id="tFVideoBGSettings" disable="true" opacity="1.0" prefWidth="442.0" />
+            <Button fx:id="bTVideoBGSettings" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changevideo" />
+          </children>
+        </HBox>
+        <Label text="%settingsview.startimage" />
+        <HBox prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <TextField fx:id="tFImageBGSettings" disable="true" opacity="1.0" prefWidth="442.0" />
+            <Button fx:id="bTImageBGSettings" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changeimage" />
+          </children>
+        </HBox>
+        <Separator prefWidth="200.0" />
+        <CheckBox fx:id="cBHotkeys" disable="true" mnemonicParsing="false" text="%settingsview.use.hotkeys" />
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F1:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF1videoPath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF1ChangeVideo" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changevideo" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F2:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF2videoPath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF2ChangeVideo" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changevideo" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F3:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF3videoPath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF3ChangeVideo" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changevideo" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F4:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF4videoPath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF4ChangeVideo" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changevideo" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F5:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF5imagePath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF5ChangeImage" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changeimage" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F6:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF6imagePath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF6ChangeImage" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changeimage" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F7:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF7imagePath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF7ChangeImage" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changeimage" />
+          </children>
+        </HBox>
+        <HBox id="tV" disable="false" prefHeight="28.0" prefWidth="560.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="F8:" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+            <TextField id="tFVideoBGSettings" fx:id="tFF8imagePath" disable="true" opacity="1.0" prefWidth="418.0" />
+            <Button id="bTVideoBGSettings" fx:id="bTF8ChangeImage" disable="true" mnemonicParsing="false" prefWidth="120.0" text="%settingsview.changeimage" />
+          </children>
+        </HBox>
+        <CheckBox fx:id="cbSongName" mnemonicParsing="false" prefWidth="442.0" text="%settingsview.disablesong" />
+        <Button fx:id="bTSaveSettings" mnemonicParsing="false" text="%settingsview.savesettings">
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+        </Button>
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="10.0" top="10.0" />
+      </padding>
+    </VBox>
+    <VBox layoutX="609.0" layoutY="-2.0" prefHeight="576.0" prefWidth="521.0">
+      <children>
+        <Label prefWidth="274.0" text="Choose font text:">
+          <VBox.margin>
+            <Insets left="10.0" top="20.0" />
+          </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="521.0">
+          <children>
+            <ComboBox fx:id="fontComboBox" prefHeight="27.999908447265625" prefWidth="285.0">
+              <items>
+
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>
