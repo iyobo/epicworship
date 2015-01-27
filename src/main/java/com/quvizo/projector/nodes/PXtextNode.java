@@ -5,6 +5,7 @@
 package com.quvizo.projector.nodes;
 
 
+import com.quvizo.config.EpicSettings;
 import java.util.logging.Logger;
 import javafx.geometry.VPos;
 import javafx.scene.effect.DropShadow;
@@ -44,7 +45,7 @@ public class PXtextNode extends PXNode
 	while( textnode.boundsInLocalProperty().getValue().getHeight()> maxheight && textnode.getFont().getSize()>5)
 	{
 	    logger.config(textnode.boundsInLocalProperty().getValue().getHeight()+" height is bigger than "+ maxheight+". Reducing font size.");
-            textnode.setFont(new Font(textnode.getFont().getSize()-4));
+            textnode.setFont(new Font(EpicSettings.getFontType(),textnode.getFont().getSize()-4)); /* Modificado por Ítalo */
 	}
 
 	//Effects
@@ -53,10 +54,16 @@ public class PXtextNode extends PXNode
 	ds.setColor(UI.TEXTSHADOWCOLOR);
 	ds.setSpread(UI.TEXTSHADOWDIMNESS);
 	
-	
+        //Include or not the shadow effect 
+	if(EpicSettings.getHaveShadow().equalsIgnoreCase("yes")){
         textnode.setEffect(ds);
+        }
+
+        //Include or not the stroke effect
+        if(EpicSettings.getHaveStroke().equalsIgnoreCase("yes")){
+        textnode.setStyle("-fx-stroke: black;-fx-stroke-width: 3;");
+        }
         
-        //textnode.setStyle("-fx-fill: "+UI.TEXTCOLOR);
 	textnode.setFill(UI.TEXTCOLOR);
 
         

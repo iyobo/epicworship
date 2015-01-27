@@ -31,7 +31,7 @@ public class EpicSettings {
             //TODO: This file may not always exist. First try to recreate it if id does not exist i.e File.exists()            
             File properties = new File(FILE);
             if (!properties.exists()) {
-                gravaPropriedade("yes", "", "", "no", "", "yes", "", "", "", "", "", "", "","System");
+                gravaPropriedade("yes", "", "", "no", "", "yes", "", "", "", "", "", "", "","System","yes","no");
             }
             entrada = new FileInputStream(FILE);
             propriedades.load(entrada);
@@ -46,7 +46,7 @@ public class EpicSettings {
     }
 
     public static void gravaPropriedade(String isDefault, String videoPath, String imagePath, String hotkeys,
-            String f1, String title, String f2, String f3, String f4, String f5, String f6, String f7, String f8, String font) {
+            String f1, String title, String f2, String f3, String f4, String f5, String f6, String f7, String f8, String font, String shadow, String stroke) {
         //Creat properties file
         Properties properties = new Properties();
         try {
@@ -65,6 +65,8 @@ public class EpicSettings {
             properties.setProperty("Live.F7.Image", f7);
             properties.setProperty("Live.F8.Image", f8);
             properties.setProperty("Font.Type", font);
+            properties.setProperty("Font.Shadow", shadow);
+            properties.setProperty("Font.Stroke", stroke);            
 
             FileOutputStream fos = new FileOutputStream("configuration.properties");
             //Save date on file
@@ -133,4 +135,12 @@ public class EpicSettings {
     public static String getFontType() {
         return lePropriedade("Font.Type");
     }
+    
+    public static String getHaveShadow() {
+        return lePropriedade("Font.Shadow");
+    }   
+    
+    public static String getHaveStroke() {
+        return lePropriedade("Font.Stroke");
+    }      
 }

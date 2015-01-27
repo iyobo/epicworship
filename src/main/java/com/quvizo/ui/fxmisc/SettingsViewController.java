@@ -375,13 +375,17 @@ public class SettingsViewController implements Initializable {
         String f6 = "";
         String f7 = "";
         String f8 = "";
+        String shadow = "yes";
+        String stroke = "no";                
         if(cbSongName.isSelected()){
             title = "no";
         }
         if (cBSettings.isSelected()) {
-            EpicSettings.gravaPropriedade("yes", "", "", hotkeys, f1, title, f2, f3, f4, f5, f6, f7, f8, "Arial");
+            EpicSettings.gravaPropriedade("yes", "", "", hotkeys, f1, title, f2, f3, f4, f5, f6, f7, f8, "Arial", "yes", "no");
             bTSaveSettings.setText(EpicSettings.bundle.getString("settingsview.saved"));
         } else {
+            shadow = EpicSettings.getHaveShadow();
+            stroke = EpicSettings.getHaveStroke();
             if (cBHotkeys.isSelected()) {
                 hotkeys = "yes";
                 f1 = tFF1videoPath.getText();
@@ -398,7 +402,7 @@ public class SettingsViewController implements Initializable {
             } else if (tFImageBGSettings.getText().equalsIgnoreCase("")) {
                 bTSaveSettings.setText(EpicSettings.bundle.getString("settingsview.notsaved.image"));
             } else {
-                EpicSettings.gravaPropriedade("no", tFVideoBGSettings.getText(), tFImageBGSettings.getText(), hotkeys, f1, title, f2, f3, f4, f5, f6, f7, f8, fonttype);
+                EpicSettings.gravaPropriedade("no", tFVideoBGSettings.getText(), tFImageBGSettings.getText(), hotkeys, f1, title, f2, f3, f4, f5, f6, f7, f8, fonttype, shadow, stroke);
                 bTSaveSettings.setText(EpicSettings.bundle.getString("settingsview.saved"));
             }
         }
