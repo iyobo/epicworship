@@ -17,8 +17,8 @@
 
 	<organization>
 		<!-- Used as the 'Vendor' for JNLP generation -->
-		<name>Quvizo Interactive</name>
-		<url>http://quvizo.com</url>
+		<name>eSific Interactive</name>
+		<url>http://esific.com</url>
 	</organization>
 
 	<build>
@@ -334,5 +334,5 @@
 		</dependencies>
 	</dependencyManagement>
 	<description>Free Church projection Software</description>
-	<url>http://www.quvizo.com/central/epicworship</url>
+	<url>http://www.esific.com/epicworship</url>
 </project>
