@@ -85,21 +85,7 @@ public class EpicOverlord {
 
     private EpicOverlord(Stage primaryStage) throws IOException {        
         this.primaryStage = primaryStage;
-        //primaryStage.setResizable(false);
-        
-       /* try {
-                SwingUtilities.invokeAndWait(new Runnable() {
-                @Override
-                public void run() {
-                    ScreenPicker.choose();
-                }
-            });
-            } catch (InterruptedException ex1) {
-                Logger.getLogger(EpicWorship.class.getName()).log(Level.SEVERE, null, ex1);
-            } catch (InvocationTargetException ex1) {
-                Logger.getLogger(EpicWorship.class.getName()).log(Level.SEVERE, null, ex1);
-            }
-              */  
+
         EntityOverlord.getInstance();
         
         Qui.showScreenPicker();
