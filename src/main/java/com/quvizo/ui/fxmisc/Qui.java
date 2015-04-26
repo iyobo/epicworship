@@ -205,7 +205,11 @@ public class Qui {
         if (title != null) {
             stage.setTitle(title);
         }
-        FXMLLoader loader = new FXMLLoader(stage.getClass().getResource(path));
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(EpicWorship.class.getResource(path));
+        
+//        FXMLLoader loader = new FXMLLoader(stage.getClass().getResource(path));
         Scene scene = new Scene((Parent) loader.load());
 
         stage.initModality(modality);

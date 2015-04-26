@@ -65,7 +65,7 @@
                                 <argument>-outdir</argument>
                                 <argument>${project.build.directory}</argument>
                                 <argument>-outfile</argument>
-                                <argument>"${project.build.finalName}.jar"</argument>
+                                <argument>${project.build.finalName}.jar</argument>
                             </arguments>
                         </configuration>
                     </execution>

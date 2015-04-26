@@ -120,9 +120,9 @@ public class ScreenPicker extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        //ProjectorConstants.screen = (GraphicsDevice) screencombo.getSelectedItem();
         
+        //ProjectorConstants.screen = (GraphicsDevice) screencombo.getSelectedItem();
+    	System.out.println("Screen selected: "+ screencombo.getSelectedItem().toString());
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();
         for (int j = 0; j < gs.length; j++) {
@@ -135,6 +135,8 @@ public class ScreenPicker extends javax.swing.JDialog {
                 ProjectorConstants.SCREENY = rect.y;
                 ProjectorConstants.SCREENWIDTH = rect.width;
                 ProjectorConstants.SCREENHEIGHT = rect.height;
+                
+                System.out.println(rect);
             }
         }
         

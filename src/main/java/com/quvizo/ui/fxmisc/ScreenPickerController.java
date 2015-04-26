@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.quvizo.universal.ProjectorConstants;
+import com.quvizo.util.OSUtils;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -100,8 +101,12 @@ public class ScreenPickerController extends FXMLController implements Initializa
             screenitem.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+                	Rectangle2D r = devicebounds;
                     ProjectorConstants.SCREENX = devicebounds.getMinX();
-                    ProjectorConstants.SCREENY = devicebounds.getMinY();
+                    if(OSUtils.isMac())
+                    	ProjectorConstants.SCREENY =   devicebounds.getMinY();
+                    else
+                    	ProjectorConstants.SCREENY =   devicebounds.getMinY();
                     ProjectorConstants.SCREENWIDTH = devicebounds.getWidth();
                     ProjectorConstants.SCREENHEIGHT = devicebounds.getHeight();
                     stage.hide();
