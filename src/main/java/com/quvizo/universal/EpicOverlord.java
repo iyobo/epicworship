@@ -19,16 +19,19 @@ package com.quvizo.universal;
 import com.quvizo.EpicWorship;
 import com.quvizo.config.EpicSettings;
 import com.quvizo.projector.pages.PXVideoPage;
+
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
+
 import com.quvizo.ui.ProjectorView;
 import com.quvizo.ui.fxmisc.Qui;
 import com.quvizo.ui.misc.OptionsDialog;
 import com.quvizo.ui.modes.BrowserMode;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,6 +41,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -136,15 +140,16 @@ public class EpicOverlord {
     /**
      * Initialize Projector
      */
-    private void initProjector() {
+    @SuppressWarnings("restriction")
+	private void initProjector() {
 
         
         //Get details for spawning new window
-        //Screen projectorMonitor = Screen.getScreens().get(Screen.getScreens().size() - 1);
+//        Screen projectorMonitor = Screen.getScreens().get(Screen.getScreens().size() - 1);
 
-        //Screen projectorMonitor = Screen.getScreens().get();
-        //ProjectorConstants.SCREENX = projectorMonitor.getBounds().getMinX();
-        //ProjectorConstants.SCREENY = projectorMonitor.getBounds().getMinY();
+//        Screen projectorMonitor = Screen.getScreens().
+//        ProjectorConstants.SCREENX = projectorMonitor.getBounds().getMinX();
+//        ProjectorConstants.SCREENY = projectorMonitor.getBounds().getMinY();
 
         //Create new borderless Window
         projectorStage = new Stage(StageStyle.UNDECORATED);
@@ -155,14 +160,12 @@ public class EpicOverlord {
         projectorStage.setHeight(ProjectorConstants.SCREENHEIGHT);
 
         //Create new scene for Window
-        Group projectorGroup = new Group();
+       
+		Group projectorGroup = new Group();
         Scene projectorScene = new Scene(projectorGroup, projectorStage.getWidth(), projectorStage.getHeight());
         ProjectorConstants.calibrate(projectorStage.getWidth(), projectorStage.getHeight());
 
-
-        ProjectorView.initInstance(projectorGroup, projectorStage.getWidth(), projectorStage.getHeight());//sees to the population of the DX uigroup with UI objects
-
-
+        ProjectorView.initInstance(projectorGroup, projectorStage.getWidth(), projectorStage.getHeight());//sees to the population of the DX UIGroup with UI objects
 
         projectorStage.setScene(projectorScene);
         projectorStage.show();

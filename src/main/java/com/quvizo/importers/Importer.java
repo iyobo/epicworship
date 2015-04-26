@@ -280,7 +280,7 @@ public class Importer {
             SongTabController.getInstance().loadSongEditor();
             SongTabController.getInstance().refreshSongTable();
             
-            ResultDialog.showMessage(java.util.ResourceBundle.getBundle("i18n/Bundle").getString("importer.text.titleimporter"),java.text.MessageFormat.format(java.util.ResourceBundle.getBundle("i18n/Bundle").getString("importer.text.finished"), new Object[] {count, dupcount}), false,trouble);
+            //TODO: ResultDialog.showMessage(java.util.ResourceBundle.getBundle("i18n/Bundle").getString("importer.text.titleimporter"),java.text.MessageFormat.format(java.util.ResourceBundle.getBundle("i18n/Bundle").getString("importer.text.finished"), new Object[] {count, dupcount}), false,trouble);
         }
 
 
