@@ -1,0 +1,1 @@
+$JAVA_HOME/bin/javapackager -deploy -native -outdir .  -outfile epicworship.app -srcfiles epicworship.jar -appclass com.quvizo.EpicWorship -name "EpicWorship" -title "EpicWorship: When you do, it must be Epic"

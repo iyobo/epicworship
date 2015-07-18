@@ -61,10 +61,11 @@ public class EpicWorship extends Application {
         try {
             // Create an appending file handler
             boolean append = true;
-            FileHandler handler = new FileHandler("epiclog.txt", append);
+            new File("epiclogs/").mkdirs();
+            FileHandler handler = new FileHandler("epiclogs/epiclog.txt", append);
 
             // Add to the desired logger
-            Logger logger = Logger.getLogger("com.bufflogic");
+            Logger logger = Logger.getLogger("com.quvizo");
             logger.addHandler(handler);
         } catch (IOException e) {
           System.out.println("This is bad. Logging could not be initialized: "+e);
@@ -92,16 +93,29 @@ public class EpicWorship extends Application {
 
             // Create an appending file handler
             boolean append = true;
-            FileHandler handler = new FileHandler("epiclog.log", append);
+            
+            String logfile = "epiclogs/epiclog.txt";
+            
+            try{
+            	File logfolder = new File("epiclogs/");
+            	logfolder.mkdirs();
+            	
+            	//redirect system.out (Useless. We use logger, but just in case someone uses System.out...)
+                File file = new File("epiclogs/deep_epiclog.txt");
+                PrintStream printStream = new PrintStream(new FileOutputStream(file));
+                System.setOut(printStream);
+            }
+            catch(Exception e){
+            	logger.warning(e.getMessage());
+            	logfile = "epiclog.txt";
+            }
+            FileHandler handler = new FileHandler(logfile, append);
             handler.setFormatter(new SimpleFormatter());
             // Add to the desired logger
-            Logger logger = Logger.getLogger("com.bufflogic");
+            Logger logger = Logger.getLogger("com.quvizo");
             logger.addHandler(handler);
 
-            //redirect system.out
-            File file = new File("deeplog.log");
-            PrintStream printStream = new PrintStream(new FileOutputStream(file));
-            System.setOut(printStream);
+            
             
             //Locale.setDefault(Locale.US);
 

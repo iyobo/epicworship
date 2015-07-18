@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="EpicWorshipPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.quvizo.data.entity.Asset</class>
+    <class>com.quvizo.data.entity.Presentation</class>
+    <class>com.quvizo.data.entity.PresentationAssets</class>
+    <class>com.quvizo.data.entity.Setting</class>
+    <class>com.quvizo.data.entity.Version</class>
+    <class>com.quvizo.data.entity.Alarm</class>
+    <class>com.quvizo.data.entity.BibleTranslation</class>
+    <properties>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+      <property name="hibernate.connection.url" value="jdbc:derby:epicdb;create=true"/>
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+      <property name="hibernate.connection.username" value="APP"/>
+    </properties>
+  </persistence-unit>
+</persistence>
