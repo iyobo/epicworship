@@ -4,6 +4,7 @@
  */
 package com.quvizo.ui.bible;
 
+import com.quvizo.config.EpicSettings;
 import com.quvizo.data.NamedString;
 import com.quvizo.data.PresentationAssetWrapper;
 import com.quvizo.data.SettingName;
@@ -16,9 +17,12 @@ import com.quvizo.ui.director.fxcontroller.CreationTabController;
 import com.quvizo.ui.fxmisc.Qui;
 import com.quvizo.universal.BibleKeeper;
 import com.quvizo.universal.EntityOverlord;
+
 import static com.quvizo.universal.EpicOverlord.primaryStage;
+
 import com.quvizo.universal.UI;
 import com.quvizo.wrappers.BibleScripture;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +30,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,7 +48,9 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
 import javax.persistence.EntityManager;
+
 import org.jdom.JDOMException;
 
 /**
@@ -107,8 +114,7 @@ public class BibleDialogController implements Initializable {
             if (biblestage == null) {
                 biblestage = new Stage(StageStyle.DECORATED);
                 biblestage.initOwner(primaryStage);
-                URL url = Stage.class.getResource("/com/quvizo/ui/bible/BibleDialog.fxml");
-                final Parent fxmlRoot = FXMLLoader.load(url);
+                final Parent fxmlRoot = FXMLLoader.load(Stage.class.getClass().getResource("/fxml/BibleDialog.fxml"),EpicSettings.bundle);
                 biblestage.setScene(new Scene(fxmlRoot));
                 biblestage.initModality(Modality.NONE);
             }
